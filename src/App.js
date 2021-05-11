@@ -15,16 +15,18 @@ function App() {
     await liff.init({ liffId: "1655970673-krpZvGxq" });
     //await liff.init({ liffId: "1655977698-0KXWzMOG" });
     if (!liff.isLoggedIn()) {
-      liff.login();
-    }
-    let profile = liff.getProfile();
-    console.log(profile);
-    setProfile({
-        displayName : profile.displayName,
-        userId : profile.userId,
-        pictureUrl : profile.pictureUrl,
-        statusMessage : profile.statusMessage
+      await liff.login().then( async () => {
+
+      let profile = await liff.getProfile();
+      console.log(profile);
+      setProfile({
+          displayName : profile.displayName,
+          userId : profile.userId,
+          pictureUrl : profile.pictureUrl,
+          statusMessage : profile.statusMessage
+        });
       });
+    }
   });
 
   useEffect(async () => {
@@ -46,8 +48,31 @@ function App() {
           {profile.displayName}
         </a>
         <div style={{ marginTop: 20 }}>
-        <button onClick={() => {
+        <button onClick={async () => {
+          
+    //liff.init({liffId: "1655970673-krpZvGxq"});
+    //https://liff.line.me/1655970673-krpZvGxq
+    await liff.init({ liffId: "1655970673-krpZvGxq" });
+    //await liff.init({ liffId: "1655977698-0KXWzMOG" });
+    if (!liff.isLoggedIn()) {
+      await liff.login().then( async () => {
 
+      let profile = await liff.getProfile();
+      console.log(profile);
+      setProfile({
+          displayName : profile.displayName,
+          userId : profile.userId,
+          pictureUrl : profile.pictureUrl,
+          statusMessage : profile.statusMessage
+        });
+      });
+    }
+
+        }}>Get User Info</button>
+      </div>
+        <div style={{ marginTop: 20 }}>
+        <button onClick={() => {
+          
           liff.sendMessages([{
             type: 'text',
             text: "Thank you, Bye!"
