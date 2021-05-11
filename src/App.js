@@ -8,11 +8,17 @@ const liff = window.liff;
 function App() {
   const [profile, setProfile] = useState([]);
 
-  useEffect(() => {
-    liff.init({liffId: "1655970673-krpZvGxq"});
+  useEffect(async () => {
+    //liff.init({liffId: "1655970673-krpZvGxq"});
+    //https://liff.line.me/1655970673-krpZvGxq
+    await liff.init({ liffId: "1655970673-krpZvGxq" });
+    if (!liff.isLoggedIn()) {
+      liff.login();
+    }
     let profile = liff.getProfile();
+    console.log(profile);
     setProfile({
-        displayName : profile.displayName,
+        displayName : liff.getOS(),
         userId : profile.userId,
         pictureUrl : profile.pictureUrl,
         statusMessage : profile.statusMessage
