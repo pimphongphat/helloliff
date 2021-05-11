@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/helloliff/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/helloliff/static/js/main.35470a11.chunk.js",
-    "main.js.map": "/helloliff/static/js/main.35470a11.chunk.js.map",
+    "main.js": "/helloliff/static/js/main.3e3ca41f.chunk.js",
+    "main.js.map": "/helloliff/static/js/main.3e3ca41f.chunk.js.map",
     "runtime-main.js": "/helloliff/static/js/runtime-main.c872231a.js",
     "runtime-main.js.map": "/helloliff/static/js/runtime-main.c872231a.js.map",
     "static/js/2.b281d2eb.chunk.js": "/helloliff/static/js/2.b281d2eb.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c872231a.js",
     "static/js/2.b281d2eb.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.35470a11.chunk.js"
+    "static/js/main.3e3ca41f.chunk.js"
   ]
 }
