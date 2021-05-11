@@ -50,10 +50,10 @@ function App() {
         <div style={{ marginTop: 20 }}>
         <button onClick={async () => {
           
-    //liff.init({liffId: "1655970673-krpZvGxq"});
-    //https://liff.line.me/1655970673-krpZvGxq
-    await liff.init({ liffId: "1655970673-krpZvGxq" });
-    //await liff.init({ liffId: "1655977698-0KXWzMOG" });
+      //liff.init({liffId: "1655970673-krpZvGxq"});
+      //https://liff.line.me/1655970673-krpZvGxq
+      await liff.init({ liffId: "1655970673-krpZvGxq" });
+      //await liff.init({ liffId: "1655977698-0KXWzMOG" });
       let profile = await liff.getProfile();
       setProfile({
           displayName : profile.displayName,
@@ -61,8 +61,6 @@ function App() {
           pictureUrl : profile.pictureUrl,
           statusMessage : profile.statusMessage
         });
-      });
-
 
         }}>Get User Info</button>
       </div>
