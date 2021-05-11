@@ -12,13 +12,14 @@ function App() {
     //liff.init({liffId: "1655970673-krpZvGxq"});
     //https://liff.line.me/1655970673-krpZvGxq
     await liff.init({ liffId: "1655970673-krpZvGxq" });
+    //await liff.init({ liffId: "1655977698-0KXWzMOG" });
     if (!liff.isLoggedIn()) {
       liff.login();
     }
     let profile = liff.getProfile();
     console.log(profile);
     setProfile({
-        displayName : liff.getOS(),
+        displayName : profile.displayName,
         userId : profile.userId,
         pictureUrl : profile.pictureUrl,
         statusMessage : profile.statusMessage
