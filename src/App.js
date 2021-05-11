@@ -54,11 +54,7 @@ function App() {
     //https://liff.line.me/1655970673-krpZvGxq
     await liff.init({ liffId: "1655970673-krpZvGxq" });
     //await liff.init({ liffId: "1655977698-0KXWzMOG" });
-    if (!liff.isLoggedIn()) {
-      await liff.login().then( async () => {
-
       let profile = await liff.getProfile();
-      console.log(profile);
       setProfile({
           displayName : profile.displayName,
           userId : profile.userId,
@@ -66,7 +62,7 @@ function App() {
           statusMessage : profile.statusMessage
         });
       });
-    }
+
 
         }}>Get User Info</button>
       </div>
