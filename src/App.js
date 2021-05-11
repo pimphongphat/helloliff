@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
 import logo from './logo.svg';
 import './App.css';
+import useConstructor from "./use.constructor";
 
 const liff = window.liff;
 
 function App() {
   const [profile, setProfile] = useState([]);
 
-  useEffect(async () => {
+  useConstructor(() => {
     //liff.init({liffId: "1655970673-krpZvGxq"});
     //https://liff.line.me/1655970673-krpZvGxq
     await liff.init({ liffId: "1655970673-krpZvGxq" });
@@ -24,6 +25,9 @@ function App() {
         pictureUrl : profile.pictureUrl,
         statusMessage : profile.statusMessage
       });
+  });
+
+  useEffect(async () => {
   }, []);
   
   return (
