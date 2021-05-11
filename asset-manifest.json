@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/helloliff/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/helloliff/static/js/main.fad7954a.chunk.js",
-    "main.js.map": "/helloliff/static/js/main.fad7954a.chunk.js.map",
+    "main.js": "/helloliff/static/js/main.827f5ca9.chunk.js",
+    "main.js.map": "/helloliff/static/js/main.827f5ca9.chunk.js.map",
     "runtime-main.js": "/helloliff/static/js/runtime-main.c872231a.js",
     "runtime-main.js.map": "/helloliff/static/js/runtime-main.c872231a.js.map",
-    "static/js/2.5015485b.chunk.js": "/helloliff/static/js/2.5015485b.chunk.js",
-    "static/js/2.5015485b.chunk.js.map": "/helloliff/static/js/2.5015485b.chunk.js.map",
+    "static/js/2.139a69c9.chunk.js": "/helloliff/static/js/2.139a69c9.chunk.js",
+    "static/js/2.139a69c9.chunk.js.map": "/helloliff/static/js/2.139a69c9.chunk.js.map",
     "static/js/3.1998bd58.chunk.js": "/helloliff/static/js/3.1998bd58.chunk.js",
     "static/js/3.1998bd58.chunk.js.map": "/helloliff/static/js/3.1998bd58.chunk.js.map",
     "index.html": "/helloliff/index.html",
     "static/css/main.9d5b29c0.chunk.css.map": "/helloliff/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.5015485b.chunk.js.LICENSE.txt": "/helloliff/static/js/2.5015485b.chunk.js.LICENSE.txt",
+    "static/js/2.139a69c9.chunk.js.LICENSE.txt": "/helloliff/static/js/2.139a69c9.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/helloliff/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c872231a.js",
-    "static/js/2.5015485b.chunk.js",
+    "static/js/2.139a69c9.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.fad7954a.chunk.js"
+    "static/js/main.827f5ca9.chunk.js"
   ]
 }
