@@ -9,7 +9,7 @@ const liff = window.liff;
 function App() {
   const [profile, setProfile] = useState([]);
 
-  useConstructor(() => {
+  useConstructor(async () => {
     //liff.init({liffId: "1655970673-krpZvGxq"});
     //https://liff.line.me/1655970673-krpZvGxq
     await liff.init({ liffId: "1655970673-krpZvGxq" });
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(async () => {
   }, []);
-  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,6 +45,18 @@ function App() {
         >
           {profile.displayName}
         </a>
+        <div style={{ marginTop: 20 }}>
+        <button onClick={() => {
+
+          liff.sendMessages([{
+            type: 'text',
+            text: "Thank you, Bye!"
+          }]).then(() => {
+            liff.closeWindow();
+          });
+
+        }}>Close LIFF</button>
+      </div>
       </header>
     </div>
   );
