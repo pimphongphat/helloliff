@@ -1,7 +1,24 @@
+import React, { useEffect, useState } from 'react';
+import ReactDOM from "react-dom";
 import logo from './logo.svg';
 import './App.css';
 
+const liff = window.liff;
+
 function App() {
+  const [profile, setProfile] = useState([]);
+
+  useEffect(() => {
+    liff.init({liffId: "1655970673-krpZvGxq"});
+    let profile = liff.getProfile();
+    setProfile({
+        displayName : profile.displayName,
+        userId : profile.userId,
+        pictureUrl : profile.pictureUrl,
+        statusMessage : profile.statusMessage
+      });
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +32,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {profile.displayName}
         </a>
       </header>
     </div>
